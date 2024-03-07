@@ -39,16 +39,16 @@ while True:
     for (x, y, w, h) in faces:
 
         # Recognize the face
-        ID, Confidence = faceRecognizer.predict(gray[y:y + h, x:x + w])
+        ID, name, age, Confidence = faceRecognizer.predict(gray[y:y + h, x:x + w])
 
         if ID == 0:
-            Person = "pseudo"
+            print("person with id "+ ID + "name "+ name + "age " + age)
         if ID == 1:
-            Person = "Hyguette"
+            print("person with id "+ ID + "name "+ name + "age " + age)
         elif ID == 2:
-            Person = "Diamant"
+            print("person with id "+ ID + "name "+ name + "age " + age)
         elif ID == 3:
-            Person = "Ighor"
+            print("person with id "+ ID + "name "+ name + "age " + age)
 
         
         # Confidence normalization to a 0-100 scale
