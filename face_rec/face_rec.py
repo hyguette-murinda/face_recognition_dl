@@ -48,7 +48,7 @@ while True:
         # Check if enough time has passed to capture an image and if image count is less than 100
         if (time.time() - current_time) * 1000 >= interval and image_count < 50:
             # Save the captured image into the datasets folder
-            cv2.imwrite(f"../dataset/data.{ID}.{NAME}.{age}{int(time.time() * 1000)}.jpg", gray[y:y + h, x:x + w])
+            cv2.imwrite(f"../dataset/data.{ID}.{NAME}.{age}.{int(time.time() * 1000)}.jpg", gray[y:y + h, x:x + w])
             current_time = time.time()
             image_count += 1
 
