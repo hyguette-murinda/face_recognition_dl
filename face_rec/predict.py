@@ -44,23 +44,20 @@ while True:
         if ID == 0:
             Person = "pseudo"
         if ID == 1:
-            Person = "Gabriel"
+            Person = "Hyguette"
         elif ID == 2:
-            Person = "Dalyoung"
+            Person = "Diamant"
         elif ID == 3:
-            Person = "Godwill"
-        elif ID == 4:
-            Person = "Bright"
-        elif ID == 5:
-            Person = "Bena"
+            Person = "Ighor"
 
+        
         # Confidence normalization to a 0-100 scale
         Confidence = 100 - Confidence
-
+        print("face recognized " + Person)
        
         if Confidence>45:
             # Create rectangle around the face
-            print("face recognized")
+            
             cv2.rectangle(frame, (x - 20, y - 20), (x + w + 20, y + h + 20), faceRectangleBorderColor, faceRectangleBorderSize)
 
              # Display name tag
