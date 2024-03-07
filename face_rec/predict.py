@@ -60,6 +60,7 @@ while True:
        
         if Confidence>45:
             # Create rectangle around the face
+            print("face recognized")
             cv2.rectangle(frame, (x - 20, y - 20), (x + w + 20, y + h + 20), faceRectangleBorderColor, faceRectangleBorderSize)
 
              # Display name tag
